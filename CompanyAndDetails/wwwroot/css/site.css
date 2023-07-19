@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gray-color: rgb(238, 236, 236)
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-page, .details-page {
+  width: 90%;
+}
+
+.content, .content-detail {
+  border: 1px solid var(--gray-color);
+}
+
+.content > p, .content-header, .content-detail > p {
+  border-left: 1px solid var(--gray-color);
+  border-right: 1px solid var(--gray-color);
+  padding: 5px;
+}
+
+.content-header {
+  border-bottom: 1px solid var(--gray-color);
+}
+
+.toolbar {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.toolbar > :first-child {
+  flex-grow: 1;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.content-detail {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.edit-form {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 5px;
+}
+
+.content-header {
+  color: var(--gray-color);
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.detail {
+  border-width: 1px 0 1px 0;
+  border-color: var(--gray-color);
+  border-style: solid;
+}
+
+.wide {
+  display: flex;
+}
+
+svg {
+  width: 20px;
+  height: 20px;
+}
